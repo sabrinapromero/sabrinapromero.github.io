@@ -48,14 +48,21 @@ a{color:var(--azul)}
   letter-spacing:.12em; text-transform:uppercase; color:var(--muted);
 }
 
-/* ---------- cabecera ---------- */
-.tope{
+/* ---------- cabecera ----------
+   Bloque pleno en azul electrico: es uno de los dos fondos que admite la marca. */
+.tope{background:var(--azul); color:var(--crema)}
+.tope-in{
   display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between;
-  gap:.35rem 1.2rem; padding:1.3rem 0 1.05rem; border-bottom:2px solid var(--tinta);
+  gap:.45rem 1.2rem; padding-block:clamp(1.1rem,3vw,1.45rem);
 }
 .tope b{
-  font-family:var(--display); font-weight:800; font-size:1.18rem;
-  letter-spacing:-.022em; line-height:1;
+  font-family:var(--display); font-weight:800; color:var(--crema);
+  font-size:clamp(1.75rem,5.6vw,2.2rem); letter-spacing:-.028em; line-height:1;
+}
+/* sobre fondo azul el texto secundario va en rosa claro, no en rosa chicle */
+.tope span{
+  font-family:var(--mono); font-size:.66rem; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--rosa-claro);
 }
 
 /* ---------- hero ---------- */
@@ -226,12 +233,14 @@ footer p{margin:0 0 .4rem; max-width:68ch}
 @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
 
-<div class="wrap">
-
 <div class="tope">
-  <b>Portfolio</b>
-  <span class="lbl">Sabrina Romero &middot; Rosario, Argentina</span>
+  <div class="wrap tope-in">
+    <b>Portfolio</b>
+    <span>Sabrina Romero &middot; Rosario, Argentina</span>
+  </div>
 </div>
+
+<div class="wrap">
 
 <header class="hero">
   <div>
