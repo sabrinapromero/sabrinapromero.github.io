@@ -1,0 +1,665 @@
+<title>Sabrina Romero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+
+<style>
+@font-face{
+  font-family:"Bootzy";
+  src:url(data:font/ttf;base64,{{FONT:BootzyTM}}) format("truetype");
+  font-weight:400; font-display:swap;
+}
+
+/* Paleta de marca — Sabrina Romero.
+   Pieza de una sola clave cromatica: fondo crema, nunca blanco ni negro puro. */
+:root{
+  --crema:#F6F1E7;
+  --crema-alt:#EFE8D9;
+  --tinta:#1C2452;
+  --azul:#2E45E0;
+  --rosa:#F276C8;
+  --rosa-claro:#F8ACDD;
+  --lila:#CBC5F5;
+  --linea:#D8D0BE;
+  --linea-suave:#E5DECD;
+  --muted:#585F86;
+
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Work Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"Space Mono",ui-monospace,Consolas,monospace;
+  --firma:"Bootzy","Bricolage Grotesque",cursive;
+  --col:1180px;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--crema); color:var(--tinta);
+  font-family:var(--body); font-size:1.0313rem; line-height:1.66;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block}
+a{color:var(--azul)}
+:focus-visible{outline:2px solid var(--azul); outline-offset:3px; border-radius:2px}
+
+.wrap{max-width:var(--col); margin-inline:auto; padding-inline:clamp(20px,5vw,48px)}
+
+.sheet{display:grid; grid-template-columns:minmax(0,1fr)}
+@media(min-width:900px){
+  .sheet{grid-template-columns:96px minmax(0,1fr); column-gap:28px}
+}
+.frame{
+  font-family:var(--mono); font-size:.66rem; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--azul);
+  padding-top:.6rem; white-space:nowrap;
+}
+@media(max-width:899px){ .frame{padding-bottom:.9rem} }
+
+.lbl{
+  font-family:var(--mono); font-size:.66rem; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--muted);
+}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(48px,8vw,96px) 0 clamp(28px,5vw,48px); position:relative}
+.destello{
+  position:absolute; top:clamp(10px,3vw,34px); right:0;
+  width:clamp(58px,9vw,108px); height:auto; pointer-events:none;
+}
+.byline{display:flex; align-items:center; gap:1.05rem; margin-bottom:clamp(22px,4vw,38px)}
+.retrato{
+  width:clamp(72px,9vw,92px); aspect-ratio:1/1; object-fit:cover; object-position:50% 18%;
+  border:1px solid var(--linea); flex:none;
+}
+.eyebrow{display:flex; flex-direction:column; gap:.22rem}
+.hero h1{
+  font-family:var(--display); font-weight:800;
+  font-size:clamp(2.75rem,9.4vw,6.7rem); line-height:.94;
+  letter-spacing:-.035em; margin:0; max-width:14ch; text-wrap:balance;
+}
+.firma{
+  font-family:var(--firma); font-weight:400; color:var(--rosa);
+  font-size:1.18em; line-height:.8; padding-inline:.04em;
+}
+.onda{
+  background-image:url({{GFX:subrayado-ondulado}});
+  background-repeat:no-repeat; background-position:left bottom;
+  background-size:100% .38em; padding-bottom:.42em;
+}
+.thesis{
+  font-size:clamp(1.14rem,2.3vw,1.58rem); line-height:1.42; font-weight:500;
+  max-width:32ch; margin:clamp(26px,4vw,38px) 0 0; text-wrap:balance;
+}
+.sub{max-width:58ch; color:var(--muted); margin:1.2rem 0 0}
+
+.stats{
+  display:grid; gap:1px; background:var(--linea);
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  border:1px solid var(--linea); margin-top:clamp(40px,6.5vw,68px);
+}
+@media(min-width:760px){ .stats{grid-template-columns:repeat(4,minmax(0,1fr))} }
+.stat{background:var(--crema); padding:1.4rem 1.3rem 1.55rem}
+.stat b{
+  display:block; font-family:var(--display); font-weight:800;
+  font-size:clamp(2rem,4.4vw,3rem); line-height:1; letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums; color:var(--azul); margin-bottom:.5rem;
+}
+.stat span{display:block; font-family:var(--mono); font-size:.65rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); line-height:1.55}
+
+/* ---------- secciones ---------- */
+section{padding:clamp(54px,8vw,100px) 0; border-top:1px solid var(--linea-suave)}
+h2{
+  font-family:var(--display); font-weight:800;
+  font-size:clamp(1.8rem,3.9vw,2.8rem); line-height:1.04;
+  letter-spacing:-.028em; margin:.5rem 0 0; text-wrap:balance;
+}
+.lede{max-width:62ch; margin:1.1rem 0 0; color:var(--muted); font-size:1.05rem}
+.lede strong{color:var(--tinta); font-weight:600}
+
+/* ---------- rango ---------- */
+.range{display:grid; gap:1px; background:var(--linea); margin-top:clamp(32px,5vw,52px); border:1px solid var(--linea)}
+@media(min-width:620px){ .range{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media(min-width:1000px){ .range{grid-template-columns:repeat(5,minmax(0,1fr))} }
+.rw{background:var(--crema); padding:1.1rem 1.05rem 1.2rem; display:flex; flex-direction:column; gap:.5rem}
+.chips{display:flex; gap:4px}
+.chips i{width:19px; height:19px; border-radius:50%; display:block; border:1px solid rgba(28,36,82,.18)}
+.rw h3{font-family:var(--display); font-weight:700; font-size:1.02rem; line-height:1.18; margin:.15rem 0 0; letter-spacing:-.014em; text-wrap:balance}
+.rw p{margin:0; font-size:.855rem; line-height:1.48; color:var(--muted)}
+.tone{font-family:var(--mono); font-size:.63rem; letter-spacing:.09em; text-transform:uppercase; color:var(--azul); margin-top:auto; padding-top:.55rem}
+
+/* ---------- casos ---------- */
+.case{--brand:var(--azul)}
+.case-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:.7rem 1.1rem}
+.bar{width:44px; height:9px; background:var(--brand); flex:none; align-self:center}
+.case h2{margin:0}
+.rubro{font-family:var(--mono); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+
+.case-grid{display:grid; gap:clamp(24px,3.4vw,44px); margin-top:clamp(26px,4vw,40px)}
+@media(min-width:940px){ .case-grid{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr); align-items:start} }
+
+.select{position:relative; padding:11px; margin:0}
+.select::after{
+  content:""; position:absolute; top:0; right:0; bottom:2.7rem; left:0;
+  border:2px solid var(--rosa); transform:rotate(-.6deg); pointer-events:none;
+}
+.select a{display:block}
+.select img{width:100%; height:auto; border:1px solid var(--linea)}
+.select figcaption{
+  font-family:var(--mono); font-size:.64rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--tinta); margin-top:.9rem;
+}
+.select figcaption em{font-style:normal; color:var(--rosa)}
+
+.notes p{margin:0 0 1rem}
+.notes p:last-child{margin-bottom:0}
+.prob{color:var(--muted)}
+.notes h4{
+  font-family:var(--mono); font-size:.65rem; font-weight:700; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--azul); margin:1.5rem 0 .5rem;
+}
+.notes h4:first-child{margin-top:0}
+.notes strong{font-weight:600}
+
+.metrics{display:grid; grid-template-columns:repeat(auto-fit,minmax(124px,1fr)); gap:1px; background:var(--linea); border:1px solid var(--linea); margin-top:1.6rem}
+.metrics div{background:var(--crema); padding:.85rem .9rem .95rem}
+.metrics b{display:block; font-family:var(--display); font-weight:800; font-size:1.55rem; line-height:1; letter-spacing:-.022em; font-variant-numeric:tabular-nums; color:var(--brand)}
+.metrics span{display:block; font-family:var(--mono); font-size:.6rem; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); margin-top:.42rem; line-height:1.45}
+
+.strip{display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:10px; margin-top:clamp(22px,3.2vw,34px)}
+.th{display:block; position:relative; border:1px solid var(--linea); background:var(--crema-alt)}
+.th img{width:100%; aspect-ratio:1/1; object-fit:cover}
+.th::after{
+  content:""; position:absolute; inset:0;
+  border:2px solid var(--azul); opacity:0; transition:opacity .15s ease;
+}
+@media(hover:hover){ .th:hover::after{opacity:1} }
+.th:focus-visible::after{opacity:1}
+
+.pie{font-family:var(--mono); font-size:.62rem; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); margin:.9rem 0 0}
+
+/* ---------- otros trabajos ---------- */
+.otros{display:grid; gap:1px; background:var(--linea); border:1px solid var(--linea); margin-top:clamp(30px,4.5vw,46px)}
+@media(min-width:760px){ .otros{grid-template-columns:repeat(3,minmax(0,1fr))} }
+.ot{background:var(--crema); padding:1.35rem 1.3rem 1.5rem}
+.ot h3{font-family:var(--display); font-weight:700; font-size:1.06rem; margin:.5rem 0 .5rem; letter-spacing:-.012em}
+.ot p{margin:0; font-size:.92rem; line-height:1.55; color:var(--muted)}
+.ot .vinculos{display:flex; flex-wrap:wrap; gap:.45rem 1.1rem; margin-top:.9rem}
+.ot a{
+  display:inline-block; color:var(--azul); text-decoration:none;
+  font-family:var(--mono); font-size:.66rem; font-weight:700; letter-spacing:.09em;
+  text-transform:uppercase; border-bottom:1px solid var(--azul); padding-bottom:.15rem;
+}
+
+/* ---------- oficio ---------- */
+.skills{display:grid; gap:1px; background:var(--linea); border:1px solid var(--linea); margin-top:clamp(30px,4.5vw,46px)}
+@media(min-width:700px){ .skills{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media(min-width:1040px){ .skills{grid-template-columns:repeat(3,minmax(0,1fr))} }
+.sk{background:var(--crema); padding:1.35rem 1.3rem 1.5rem}
+.sk h3{font-family:var(--display); font-weight:700; font-size:1.1rem; margin:.5rem 0 .7rem; letter-spacing:-.015em}
+.sk ul{margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:.38rem}
+.sk li{font-family:var(--mono); font-size:.655rem; color:var(--tinta); background:var(--crema-alt); border:1px solid var(--linea-suave); padding:.28rem .5rem}
+
+/* ---------- metodo ---------- */
+.steps{margin-top:clamp(30px,4.5vw,46px); border-top:1px solid var(--linea)}
+.step{display:grid; gap:.3rem 1.6rem; padding:1.45rem 0; border-bottom:1px solid var(--linea)}
+@media(min-width:820px){ .step{grid-template-columns:52px 244px minmax(0,1fr); align-items:baseline} }
+.step .n{font-family:var(--mono); font-size:.7rem; font-weight:700; letter-spacing:.08em; color:var(--azul)}
+.step h3{font-family:var(--display); font-weight:700; font-size:1.1rem; margin:0; letter-spacing:-.015em}
+.step p{margin:0; color:var(--muted)}
+
+/* ---------- contacto ---------- */
+.cta{position:relative; background:var(--azul); color:var(--crema); padding:clamp(30px,5vw,54px); margin-top:clamp(28px,4vw,42px); overflow:hidden}
+.cta h2{color:var(--crema); max-width:19ch}
+.cta p{max-width:52ch; color:var(--lila); margin:1rem 0 0}
+.cta .destello-cta{position:absolute; top:-14px; right:-14px; width:clamp(74px,11vw,132px); opacity:.85; pointer-events:none}
+.links{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.8rem; position:relative}
+.links a{
+  font-family:var(--mono); font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  text-decoration:none; padding:.75rem 1.05rem;
+  background:var(--rosa); color:var(--tinta);
+}
+.links a.ghost{background:transparent; color:var(--rosa-claro); border:1px solid var(--rosa-claro)}
+
+footer{padding:2.2rem 0 3.4rem; border-top:1px solid var(--linea-suave); color:var(--muted); font-size:.85rem}
+footer p{margin:0 0 .4rem; max-width:68ch}
+
+@media (prefers-reduced-motion:reduce){ *{transition:none !important} }
+</style>
+
+<div class="wrap">
+
+<header class="hero sheet">
+  <div class="frame">01 &mdash; 06</div>
+  <div>
+    <img class="destello" src="{{GFX:destello-rosa}}" alt="">
+    <div class="byline">
+      <img class="retrato" src="{{IMG:retrato}}" alt="Retrato de Sabrina Romero">
+      <div class="eyebrow">
+        <span class="lbl">Sabrina Romero</span>
+        <span class="lbl">Rosario, Argentina</span>
+        <span class="lbl">Desde 2015</span>
+      </div>
+    </div>
+    <h1>Cinco marcas que no se <span class="firma">hablan</span> entre s&iacute;.</h1>
+    <p class="thesis">Una marca no tiene voz hasta que alguien <span class="onda">se la escribe</span>. Cada una de estas cinco encontr&oacute; la suya.</p>
+    <p class="sub">Fot&oacute;grafa, creadora de contenido y dise&ntilde;adora. Manejo la comunicaci&oacute;n completa de marcas de indumentaria, gastronom&iacute;a, papeler&iacute;a, eventos y servicios profesionales &mdash; desde la estrategia mensual hasta la pieza publicada.</p>
+
+    <div class="stats">
+      <div class="stat"><b>5</b><span>Marcas en simult&aacute;neo</span></div>
+      <div class="stat"><b>70.100</b><span>Reproducciones en reels de clientes</span></div>
+      <div class="stat"><b>85</b><span>Comentarios en una sola publicaci&oacute;n</span></div>
+      <div class="stat"><b>10+</b><span>A&ntilde;os en foto y dise&ntilde;o</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="sheet">
+  <div class="frame">Rango</div>
+  <div>
+    <span class="lbl">El argumento</span>
+    <h2>Cambiar de idioma cinco veces por semana</h2>
+    <p class="lede">La mayor&iacute;a de las cuentas se manejan con un solo tono porque quien las escribe tiene uno solo. Estas cinco <strong>no comparten paleta, ritmo, p&uacute;blico ni vocabulario</strong>. Una habla de subastas judiciales. Otra, de cumplea&ntilde;os de cinco a&ntilde;os.</p>
+
+    <div class="range">
+      <article class="rw">
+        <div class="chips"><i style="background:#F2D04F"></i><i style="background:#7A4E2D"></i><i style="background:#EFE7D6"></i></div>
+        <h3>Hornea / Jard&iacute;n Caf&eacute;</h3>
+        <p>Cafeter&iacute;a en una casona de Moreno 135.</p>
+        <span class="tone">C&aacute;lido &middot; sensorial</span>
+      </article>
+      <article class="rw">
+        <div class="chips"><i style="background:#028593"></i><i style="background:#FF5A04"></i><i style="background:#FFD166"></i></div>
+        <h3>Estaci&oacute;n Loyola</h3>
+        <p>Papeler&iacute;a, art&iacute;stica y centro de copiado.</p>
+        <span class="tone">Cercano &middot; humor</span>
+      </article>
+      <article class="rw">
+        <div class="chips"><i style="background:#96110D"></i><i style="background:#6C0D0A"></i><i style="background:#000000"></i></div>
+        <h3>Vincenzo Collezione</h3>
+        <p>Indumentaria masculina cl&aacute;sica. Desde 1995.</p>
+        <span class="tone">Elegante &middot; sobrio</span>
+      </article>
+      <article class="rw">
+        <div class="chips"><i style="background:#EA5A1C"></i><i style="background:#DEDC00"></i><i style="background:#D6A7C5"></i></div>
+        <h3>C&aacute;psula</h3>
+        <p>Kits de decoraci&oacute;n en papel para fiestas.</p>
+        <span class="tone">Alegre &middot; personal</span>
+      </article>
+      <article class="rw">
+        <div class="chips"><i style="background:#4F7081"></i><i style="background:#C62828"></i><i style="background:#000000"></i></div>
+        <h3>David Boschi Subastas</h3>
+        <p>Martillero p&uacute;blico. Subastas judiciales.</p>
+        <span class="tone">Legal &middot; preciso</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="case sheet" style="--brand:#B8871F">
+  <div class="frame">Caso 01</div>
+  <div>
+    <div class="case-head">
+      <span class="bar"></span>
+      <h2>Hornea / Jard&iacute;n Caf&eacute;</h2>
+      <span class="rubro">Gastronom&iacute;a &middot; Rosario</span>
+    </div>
+
+    <div class="case-grid">
+      <figure class="select">
+        <a href="https://www.instagram.com/p/DXCumKCmHEF/" target="_blank" rel="noopener">
+          <img src="{{IMG:DXCumKCmHEF}}" alt="Publicaci&oacute;n de Hornea con 847 me gusta">
+        </a>
+        <figcaption><em>Seleccionada</em> &mdash; la publicaci&oacute;n m&aacute;s vista de la cuenta</figcaption>
+      </figure>
+
+      <div class="notes">
+        <h4>El problema</h4>
+        <p class="prob">Una casona hermosa que la gente no conoc&iacute;a por dentro. El producto &mdash;medialunas, croissants, caf&eacute; Illy&mdash; compet&iacute;a con cincuenta cafeter&iacute;as que publican exactamente la misma foto de una taza.</p>
+
+        <h4>Qu&eacute; hice</h4>
+        <p>Dej&eacute; de vender caf&eacute; y empec&eacute; a vender <strong>la pausa</strong>. Luz natural, texturas del hojaldre, rincones de la casona, mesas a media ma&ntilde;ana. Cero venta agresiva: el lugar es el argumento y la foto tiene que dar ganas de estar ah&iacute;, no de comprar.</p>
+
+        <div class="metrics">
+          <div><b>847</b><span>Me gusta &middot; mejor carrusel</span></div>
+          <div><b>7.442</b><span>Reproducciones &middot; mejor reel</span></div>
+          <div><b>21.500</b><span>Reproducciones en reels</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="strip">
+      <a class="th" href="https://www.instagram.com/p/DcouoxbsTx4/" target="_blank" rel="noopener"><img src="{{IMG:DcouoxbsTx4}}" alt="Reel de Hornea"></a>
+      <a class="th" href="https://www.instagram.com/p/DXrqte8jpG_/" target="_blank" rel="noopener"><img src="{{IMG:DXrqte8jpG_}}" alt="Publicaci&oacute;n de Hornea"></a>
+      <a class="th" href="https://www.instagram.com/p/DbskK_cjtkR/" target="_blank" rel="noopener"><img src="{{IMG:DbskK_cjtkR}}" alt="Publicaci&oacute;n de Hornea"></a>
+      <a class="th" href="https://www.instagram.com/p/DZAHhxvAMWb/" target="_blank" rel="noopener"><img src="{{IMG:DZAHhxvAMWb}}" alt="Publicaci&oacute;n de Hornea"></a>
+      <a class="th" href="https://www.instagram.com/p/DcdhCjBmw0L/" target="_blank" rel="noopener"><img src="{{IMG:DcdhCjBmw0L}}" alt="Publicaci&oacute;n de Hornea"></a>
+      <a class="th" href="https://www.instagram.com/p/DcJUBKAjv4R/" target="_blank" rel="noopener"><img src="{{IMG:DcJUBKAjv4R}}" alt="Publicaci&oacute;n de Hornea"></a>
+    </div>
+    <p class="pie">Toc&aacute; cualquier imagen para abrir la publicaci&oacute;n en Instagram</p>
+  </div>
+</section>
+
+<section class="case sheet" style="--brand:#028593">
+  <div class="frame">Caso 02</div>
+  <div>
+    <div class="case-head">
+      <span class="bar"></span>
+      <h2>Estaci&oacute;n Loyola</h2>
+      <span class="rubro">Papeler&iacute;a y centro de copiado</span>
+    </div>
+
+    <div class="case-grid">
+      <figure class="select">
+        <a href="https://www.instagram.com/p/DYWzpM5A049/" target="_blank" rel="noopener">
+          <img src="{{IMG:DYWzpM5A049}}" alt="Reel de Estaci&oacute;n Loyola con 85 comentarios">
+        </a>
+        <figcaption><em>Seleccionada</em> &mdash; 85 comentarios en un solo reel</figcaption>
+      </figure>
+
+      <div class="notes">
+        <h4>El problema</h4>
+        <p class="prob">Una librer&iacute;a no tiene producto aspiracional. Nadie guarda la foto de un anillado. Y la competencia es toda la ciudad, con los mismos art&iacute;culos y precios parecidos.</p>
+
+        <h4>Qu&eacute; hice</h4>
+        <p>Si el producto no emociona, emociona <strong>la situaci&oacute;n</strong>. Constru&iacute; una l&iacute;nea de contenido con el humor cotidiano de la librer&iacute;a: la urgencia escolar, el tr&aacute;mite de &uacute;ltimo momento, el cliente que llega tres minutos antes de cerrar. La gente no comenta un producto &mdash; comenta cuando se ve reflejada.</p>
+
+        <div class="metrics">
+          <div><b>85</b><span>Comentarios en un reel</span></div>
+          <div><b>345</b><span>Me gusta &middot; mismo reel</span></div>
+          <div><b>28.500</b><span>Reproducciones en reels</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="strip">
+      <a class="th" href="https://www.instagram.com/p/DZdphDhgMXU/" target="_blank" rel="noopener"><img src="{{IMG:DZdphDhgMXU}}" alt="Carrusel de Estaci&oacute;n Loyola"></a>
+      <a class="th" href="https://www.instagram.com/p/DYE7GD8h3tY/" target="_blank" rel="noopener"><img src="{{IMG:DYE7GD8h3tY}}" alt="Reel de Estaci&oacute;n Loyola"></a>
+      <a class="th" href="https://www.instagram.com/p/Db6J0Dxp1Qg/" target="_blank" rel="noopener"><img src="{{IMG:Db6J0Dxp1Qg}}" alt="Reel de Estaci&oacute;n Loyola"></a>
+      <a class="th" href="https://www.instagram.com/p/DcV3O3Vhh40/" target="_blank" rel="noopener"><img src="{{IMG:DcV3O3Vhh40}}" alt="Reel de Estaci&oacute;n Loyola"></a>
+      <a class="th" href="https://www.instagram.com/p/Db_j0z9p3am/" target="_blank" rel="noopener"><img src="{{IMG:Db_j0z9p3am}}" alt="Reel de Estaci&oacute;n Loyola"></a>
+      <a class="th" href="https://www.instagram.com/p/DbD_ZciILLU/" target="_blank" rel="noopener"><img src="{{IMG:DbD_ZciILLU}}" alt="Publicaci&oacute;n de Estaci&oacute;n Loyola"></a>
+    </div>
+  </div>
+</section>
+
+<section class="case sheet" style="--brand:#96110D">
+  <div class="frame">Caso 03</div>
+  <div>
+    <div class="case-head">
+      <span class="bar"></span>
+      <h2>Vincenzo Collezione</h2>
+      <span class="rubro">Indumentaria masculina &middot; desde 1995</span>
+    </div>
+
+    <div class="case-grid">
+      <figure class="select">
+        <a href="https://www.instagram.com/p/DXx7bmHjWBs/" target="_blank" rel="noopener">
+          <img src="{{IMG:DXx7bmHjWBs}}" alt="Campa&ntilde;a de Vincenzo Collezione">
+        </a>
+        <figcaption><em>Seleccionada</em> &mdash; campa&ntilde;a de temporada</figcaption>
+      </figure>
+
+      <div class="notes">
+        <h4>El problema</h4>
+        <p class="prob">Una marca de treinta a&ntilde;os, con clientela fiel de 25 a 64, que necesitaba verse actual sin volverse juvenil. Y sin banco de im&aacute;genes propio: casi todo el material lo produzco yo.</p>
+
+        <h4>Qu&eacute; hice</h4>
+        <p>Direcci&oacute;n editorial masculina sostenida sobre la paleta de la marca &mdash; rojo, negro y blanco. Textura de tela, planos detalle, composici&oacute;n limpia. Nada de tipograf&iacute;as grandes ni promesas gritadas. <strong>La prenda se muestra, no se anuncia.</strong> El resultado es una cuenta que alcanza sin hacer ruido.</p>
+
+        <div class="metrics">
+          <div><b>13.100</b><span>Reproducciones en 10 reels</span></div>
+          <div><b>1.310</b><span>Promedio por reel</span></div>
+          <div><b>55</b><span>Me gusta &middot; mejor carrusel</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="strip">
+      <a class="th" href="https://www.instagram.com/p/DcgXyTACiMx/" target="_blank" rel="noopener"><img src="{{IMG:DcgXyTACiMx}}" alt="Publicaci&oacute;n de Vincenzo"></a>
+      <a class="th" href="https://www.instagram.com/p/DWnQjEYj-p8/" target="_blank" rel="noopener"><img src="{{IMG:DWnQjEYj-p8}}" alt="Publicaci&oacute;n de Vincenzo"></a>
+      <a class="th" href="https://www.instagram.com/p/DbtGhLvDr-B/" target="_blank" rel="noopener"><img src="{{IMG:DbtGhLvDr-B}}" alt="Publicaci&oacute;n de Vincenzo"></a>
+      <a class="th" href="https://www.instagram.com/p/DcbLxvMDb0U/" target="_blank" rel="noopener"><img src="{{IMG:DcbLxvMDb0U}}" alt="Publicaci&oacute;n de Vincenzo"></a>
+      <a class="th" href="https://www.instagram.com/p/DVm4lnnDWKw/" target="_blank" rel="noopener"><img src="{{IMG:DVm4lnnDWKw}}" alt="Publicaci&oacute;n de Vincenzo"></a>
+      <a class="th" href="https://www.instagram.com/p/DaoKE5VmVNT/" target="_blank" rel="noopener"><img src="{{IMG:DaoKE5VmVNT}}" alt="Publicaci&oacute;n de Vincenzo"></a>
+    </div>
+  </div>
+</section>
+
+<section class="case sheet" style="--brand:#D9531A">
+  <div class="frame">Caso 04</div>
+  <div>
+    <div class="case-head">
+      <span class="bar"></span>
+      <h2>C&aacute;psula</h2>
+      <span class="rubro">Kits de decoraci&oacute;n en papel</span>
+    </div>
+
+    <div class="case-grid">
+      <figure class="select">
+        <a href="https://www.instagram.com/p/DM9AchXNRfm/" target="_blank" rel="noopener">
+          <img src="{{IMG:DM9AchXNRfm}}" alt="Kit personalizado de C&aacute;psula">
+        </a>
+        <figcaption><em>Seleccionada</em> &mdash; kit tem&aacute;tico completo</figcaption>
+      </figure>
+
+      <div class="notes">
+        <h4>El problema</h4>
+        <p class="prob">Un producto que se entiende reci&eacute;n cuando est&aacute; armado sobre la mesa. Fotos sueltas de un topper o un sticker no comunican qu&eacute; se compra ni por qu&eacute; vale lo que vale.</p>
+
+        <h4>Qu&eacute; hice</h4>
+        <p>Dise&ntilde;o gr&aacute;fico y direcci&oacute;n de escena en un mismo sistema: cada kit se muestra <strong>en uso</strong>, no en cat&aacute;logo. Composiciones limpias, fondos que no compiten, el nombre del chico o la tem&aacute;tica siempre legible. Cuando uso IA para ambientar, el arte original se preserva intacto &mdash; nunca se redise&ntilde;a la pieza.</p>
+
+        <h4>Qu&eacute; se ve ac&aacute;</h4>
+        <p class="prob">Piezas gr&aacute;ficas propias: tem&aacute;ticas personalizadas, etiquetas y papeler&iacute;a para emprendedoras.</p>
+      </div>
+    </div>
+
+    <div class="strip">
+      <a class="th" href="https://www.instagram.com/p/DaZG2R2DeF2/" target="_blank" rel="noopener"><img src="{{IMG:DaZG2R2DeF2}}" alt="Kit de C&aacute;psula"></a>
+      <a class="th" href="https://www.instagram.com/p/DboV7BuGYgu/" target="_blank" rel="noopener"><img src="{{IMG:DboV7BuGYgu}}" alt="Kit de C&aacute;psula"></a>
+      <a class="th" href="https://www.instagram.com/p/DbdiDzAEZGQ/" target="_blank" rel="noopener"><img src="{{IMG:DbdiDzAEZGQ}}" alt="Kit de C&aacute;psula"></a>
+      <a class="th" href="https://www.instagram.com/p/Da0BAkSlqW4/" target="_blank" rel="noopener"><img src="{{IMG:Da0BAkSlqW4}}" alt="Kit de C&aacute;psula"></a>
+      <a class="th" href="https://www.instagram.com/p/Daq4cYfmag6/" target="_blank" rel="noopener"><img src="{{IMG:Daq4cYfmag6}}" alt="Kit de C&aacute;psula"></a>
+      <a class="th" href="https://www.instagram.com/p/Dct0IvuGdSJ/" target="_blank" rel="noopener"><img src="{{IMG:Dct0IvuGdSJ}}" alt="Kit de C&aacute;psula"></a>
+    </div>
+  </div>
+</section>
+
+<section class="case sheet" style="--brand:#4F7081">
+  <div class="frame">Caso 05</div>
+  <div>
+    <div class="case-head">
+      <span class="bar"></span>
+      <h2>David Boschi Subastas</h2>
+      <span class="rubro">Martillero p&uacute;blico &middot; subastas judiciales</span>
+    </div>
+
+    <div class="case-grid">
+      <figure class="select">
+        <a href="https://www.instagram.com/p/DZvXkcimN3M/" target="_blank" rel="noopener">
+          <img src="{{IMG:DZvXkcimN3M}}" alt="Ficha de subasta de David Boschi">
+        </a>
+        <figcaption><em>Seleccionada</em> &mdash; ficha de bien en remate</figcaption>
+      </figure>
+
+      <div class="notes">
+        <h4>El problema</h4>
+        <p class="prob">El contenido m&aacute;s dif&iacute;cil que manejo. Base, retasa, deudas, comisi&oacute;n, fecha de exhibici&oacute;n: informaci&oacute;n legal donde un dato mal puesto no es un error de dise&ntilde;o, es un problema real.</p>
+
+        <h4>Qu&eacute; hice</h4>
+        <p>Sistema de fichas con jerarqu&iacute;a fija. El bien arriba, las condiciones abajo, siempre en el mismo orden y siempre completas. Alto contraste, rojo reservado <strong>&uacute;nicamente</strong> para fechas l&iacute;mite y alertas. Ac&aacute; el dise&ntilde;o no seduce: ordena y da confianza.</p>
+
+        <h4>Por qu&eacute; importa</h4>
+        <p class="prob">Es la prueba de que puedo trabajar con contenido sensible, t&eacute;cnico y regulado sin volverlo ilegible ni fr&iacute;o.</p>
+      </div>
+    </div>
+
+    <div class="strip">
+      <a class="th" href="https://www.instagram.com/p/DbZMK72GGue/" target="_blank" rel="noopener"><img src="{{IMG:DbZMK72GGue}}" alt="Ficha de subasta de un Peugeot 208"></a>
+      <a class="th" href="https://www.instagram.com/p/DYR4kUsDqD4/" target="_blank" rel="noopener"><img src="{{IMG:DYR4kUsDqD4}}" alt="Ficha de subasta"></a>
+      <a class="th" href="https://www.instagram.com/p/DbwMB7CmM46/" target="_blank" rel="noopener"><img src="{{IMG:DbwMB7CmM46}}" alt="Ficha de subasta"></a>
+      <a class="th" href="https://www.instagram.com/p/DZlGgygmBQx/" target="_blank" rel="noopener"><img src="{{IMG:DZlGgygmBQx}}" alt="Ficha de subasta"></a>
+    </div>
+  </div>
+</section>
+
+<section class="case sheet" style="--brand:#2E45E0">
+  <div class="frame">Caso 06</div>
+  <div>
+    <div class="case-head">
+      <span class="bar"></span>
+      <h2>Cuenta propia</h2>
+      <span class="rubro">@sabrinaromerofotografia</span>
+    </div>
+    <p class="lede">Donde pruebo antes de proponer. Foto autoral, proceso de trabajo y lo que aprendo manejando cinco cuentas a la vez. <strong>4.735 reproducciones</strong> en el reel m&aacute;s visto.</p>
+    <div class="strip">
+      <a class="th" href="https://www.instagram.com/p/DX12mFwxppf/" target="_blank" rel="noopener"><img src="{{IMG:DX12mFwxppf}}" alt="Reel propio con 4.735 reproducciones"></a>
+      <a class="th" href="https://www.instagram.com/p/DOSSeSDjA8Z/" target="_blank" rel="noopener"><img src="{{IMG:DOSSeSDjA8Z}}" alt="Publicaci&oacute;n propia"></a>
+      <a class="th" href="https://www.instagram.com/p/DGtxNP4xadv/" target="_blank" rel="noopener"><img src="{{IMG:DGtxNP4xadv}}" alt="Reel propio"></a>
+      <a class="th" href="https://www.instagram.com/p/DOzeQOpEbbW/" target="_blank" rel="noopener"><img src="{{IMG:DOzeQOpEbbW}}" alt="Publicaci&oacute;n propia"></a>
+      <a class="th" href="https://www.instagram.com/p/DIUwn7RxtEg/" target="_blank" rel="noopener"><img src="{{IMG:DIUwn7RxtEg}}" alt="Reel propio"></a>
+      <a class="th" href="https://www.instagram.com/p/DODzGc5EfiC/" target="_blank" rel="noopener"><img src="{{IMG:DODzGc5EfiC}}" alt="Publicaci&oacute;n propia"></a>
+    </div>
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="frame">Adem&aacute;s</div>
+  <div>
+    <span class="lbl">Otros trabajos</span>
+    <h2>No todo es una cuenta de Instagram</h2>
+    <p class="lede">Trabajos por encargo para empresas y emprendimientos, por fuera de la gesti&oacute;n mensual de redes.</p>
+
+    <div class="otros">
+      <article class="ot">
+        <span class="lbl">Cat&aacute;logo</span>
+        <h3>Cat&aacute;logo de temporada</h3>
+        <p>Cat&aacute;logo web para Varanasi, indumentaria femenina. Veinticinco prendas ordenadas en cinco l&iacute;neas &mdash; camiser&iacute;a, punto, abrigos y sastrer&iacute;a, pantalones y vestidos &mdash;, cada una con frente, espalda y detalle.</p>
+        <div class="vinculos"><a href="https://varanasi-catalogo.vercel.app/" target="_blank" rel="noopener">Ver el cat&aacute;logo</a></div>
+      </article>
+      <article class="ot">
+        <span class="lbl">Vectores</span>
+        <h3>Digitalizaci&oacute;n de estampas</h3>
+        <p>Paso a vector estampas, logos y dise&ntilde;os para empresas de ropa, listos para producci&oacute;n. Trabajo t&eacute;cnico: el archivo tiene que entrar al taller sin correcciones.</p>
+      </article>
+      <article class="ot">
+        <span class="lbl">Eventos</span>
+        <h3>Invitaciones digitales</h3>
+        <p>Invitaciones web para cumplea&ntilde;os y quince, con tem&aacute;tica propia y cuenta regresiva. Los invitados confirman por WhatsApp, suben las fotos de la fiesta y firman un libro de saludos que despu&eacute;s se imprime &mdash; todo desde el mismo link.</p>
+        <div class="vinculos">
+          <a href="https://luca-cumple-6.vercel.app" target="_blank" rel="noopener">Los 6 de Luca</a>
+          <a href="https://sprstudio.my.canva.site/invitacion-xv-zoe" target="_blank" rel="noopener">XV de Zoe</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="frame">Oficio</div>
+  <div>
+    <span class="lbl">Qu&eacute; s&eacute; hacer</span>
+    <h2>Resuelvo la cadena entera</h2>
+    <p class="lede">Casi ninguna de estas marcas tiene banco de im&aacute;genes propio. <strong>Cuando no hay material, no espero: lo produzco.</strong> Fotograf&iacute;o, dise&ntilde;o, y cuando lo &uacute;nico que hay es una foto sacada con un celular, la llevo a calidad de campa&ntilde;a con IA. La publicaci&oacute;n sale igual &mdash; y sale bien.</p>
+
+    <div class="skills">
+      <div class="sk">
+        <span class="lbl">Fotograf&iacute;a</span>
+        <h3>Produzco el material</h3>
+        <ul><li>Producto</li><li>Marca</li><li>Gastronom&iacute;a</li><li>Indumentaria</li><li>Composici&oacute;n</li><li>Edici&oacute;n y color</li></ul>
+      </div>
+      <div class="sk">
+        <span class="lbl">Direcci&oacute;n visual</span>
+        <h3>Defino c&oacute;mo se ve</h3>
+        <ul><li>Identidad por marca</li><li>Paletas</li><li>Sistemas de piezas</li><li>Moodboards</li><li>Coherencia de feed</li></ul>
+      </div>
+      <div class="sk">
+        <span class="lbl">Contenido</span>
+        <h3>Escribo y edito</h3>
+        <ul><li>Reels</li><li>Carruseles</li><li>Historias</li><li>Guiones</li><li>Ganchos</li><li>Copywriting</li></ul>
+      </div>
+      <div class="sk">
+        <span class="lbl">Community management</span>
+        <h3>Sostengo la cuenta</h3>
+        <ul><li>Calendarios mensuales</li><li>Pilares de contenido</li><li>Embudo TOFU / MOFU / BOFU</li><li>Respuesta a comunidad</li><li>Lectura de m&eacute;tricas</li></ul>
+      </div>
+      <div class="sk">
+        <span class="lbl">Dise&ntilde;o gr&aacute;fico</span>
+        <h3>Armo las piezas</h3>
+        <ul><li>Piezas para redes</li><li>Etiquetas</li><li>Papeler&iacute;a</li><li>Vectores</li><li>Adaptaciones de marca</li></ul>
+      </div>
+      <div class="sk">
+        <span class="lbl">Herramientas</span>
+        <h3>Con qu&eacute; trabajo</h3>
+        <ul><li>Adobe (paquete completo)</li><li>Adobe Firefly</li><li>CapCut Pro</li><li>Higgsfield</li><li>Magnific</li><li>Nano Banana Pro</li><li>Claude</li><li>ChatGPT</li><li>Canva</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="frame">M&eacute;todo</div>
+  <div>
+    <span class="lbl">C&oacute;mo trabajo</span>
+    <h2>Ninguna cuenta se resuelve en el d&iacute;a</h2>
+    <p class="lede">Este es el orden real, y es la diferencia entre publicar y comunicar.</p>
+
+    <div class="steps">
+      <div class="step">
+        <span class="n">01</span>
+        <h3>Entender el negocio</h3>
+        <p>Qu&eacute; vende, a qui&eacute;n, qu&eacute; problema le resuelve y qu&eacute; lo diferencia del local de al lado. Antes de cualquier decisi&oacute;n est&eacute;tica.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <h3>Definir tono y pilares</h3>
+        <p>C&oacute;mo habla la marca y sobre qu&eacute; temas vuelve todos los meses. Sin esto, cada publicaci&oacute;n arranca de cero.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <h3>Calendario mensual</h3>
+        <p>Fechas propias, fechas del rubro, lanzamientos y promos. Ordenado antes de que empiece el mes, no el mismo d&iacute;a.</p>
+      </div>
+      <div class="step">
+        <span class="n">04</span>
+        <h3>Producci&oacute;n</h3>
+        <p>Fotograf&iacute;a, dise&ntilde;o, gui&oacute;n y edici&oacute;n. Si falta material se produce; no se posterga la publicaci&oacute;n.</p>
+      </div>
+      <div class="step">
+        <span class="n">05</span>
+        <h3>Publicaci&oacute;n y comunidad</h3>
+        <p>Copy adaptado a cada marca, horarios pensados, respuesta a comentarios y mensajes.</p>
+      </div>
+      <div class="step">
+        <span class="n">06</span>
+        <h3>Leer los n&uacute;meros</h3>
+        <p>Qu&eacute; funcion&oacute;, qu&eacute; no y por qu&eacute;. El mes siguiente se arma con esos datos &mdash; igual que este portfolio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sheet">
+  <div class="frame">Contacto</div>
+  <div>
+    <div class="cta">
+      <img class="destello-cta" src="{{GFX:destello-lila}}" alt="">
+      <h2>&iquest;Ten&eacute;s una marca que suena a todas las dem&aacute;s?</h2>
+      <p>Trabajo con cuentas de Rosario y de todo el pa&iacute;s. Contame qu&eacute; vend&eacute;s y a qui&eacute;n, y te digo qu&eacute; har&iacute;a con tu comunicaci&oacute;n en los pr&oacute;ximos tres meses.</p>
+      <div class="links">
+        <a href="https://wa.me/5493412091245" target="_blank" rel="noopener">Escribime por WhatsApp</a>
+        <a class="ghost" href="https://www.instagram.com/sabrinaromerofotografia/" target="_blank" rel="noopener">@sabrinaromerofotografia</a>
+        <a class="ghost" href="mailto:sabrinaromerofotografia@gmail.com">Mail</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="sheet">
+  <div class="frame">Nota</div>
+  <div>
+    <p>M&eacute;tricas relevadas el 8 de septiembre de 2026 sobre las &uacute;ltimas 30 publicaciones de cada cuenta. Corresponden a datos p&uacute;blicos de Instagram.</p>
+    <p>Todas las piezas mostradas son trabajos realizados para marcas que gestiono o gestion&eacute;. Sabrina Romero &mdash; Rosario, Argentina.</p>
+  </div>
+</footer>
+
+</div>

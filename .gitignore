@@ -1,0 +1,12 @@
+# Originales sin optimizar: se rebajan a assets/web y no hacen falta en el repo
+assets/raw/
+assets/reel_retrato.jpg
+
+# El reel todavía no se publicó — no va a un repositorio público
+*.mp4
+
+# Datos crudos del scraping (las URLs de Instagram caducan a los días)
+data/
+
+# Copia local que alimenta el artifact de Claude (identica a index.html)
+portfolio.html
