@@ -43,24 +43,23 @@ a{color:var(--azul)}
 
 .wrap{max-width:var(--col); margin-inline:auto; padding-inline:clamp(20px,5vw,48px)}
 
-.sheet{display:grid; grid-template-columns:minmax(0,1fr)}
-@media(min-width:900px){
-  .sheet{grid-template-columns:96px minmax(0,1fr); column-gap:28px}
-}
-.frame{
-  font-family:var(--mono); font-size:.66rem; font-weight:700;
-  letter-spacing:.1em; text-transform:uppercase; color:var(--azul);
-  padding-top:.6rem; white-space:nowrap;
-}
-@media(max-width:899px){ .frame{padding-bottom:.9rem} }
-
 .lbl{
   font-family:var(--mono); font-size:.66rem; font-weight:700;
   letter-spacing:.12em; text-transform:uppercase; color:var(--muted);
 }
 
+/* ---------- cabecera ---------- */
+.tope{
+  display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between;
+  gap:.35rem 1.2rem; padding:1.3rem 0 1.05rem; border-bottom:2px solid var(--tinta);
+}
+.tope b{
+  font-family:var(--display); font-weight:800; font-size:1.18rem;
+  letter-spacing:-.022em; line-height:1;
+}
+
 /* ---------- hero ---------- */
-.hero{padding:clamp(48px,8vw,96px) 0 clamp(28px,5vw,48px); position:relative}
+.hero{padding:clamp(34px,6vw,68px) 0 clamp(28px,5vw,48px); position:relative}
 .destello{
   position:absolute; top:clamp(10px,3vw,34px); right:0;
   width:clamp(58px,9vw,108px); height:auto; pointer-events:none;
@@ -118,6 +117,8 @@ h2{
 /* ---------- rango ---------- */
 .range{display:grid; gap:1px; background:var(--linea); margin-top:clamp(32px,5vw,52px); border:1px solid var(--linea)}
 @media(min-width:620px){ .range{grid-template-columns:repeat(2,minmax(0,1fr))} }
+/* cinco marcas en dos columnas dejan un hueco: la ultima ocupa la fila entera */
+@media(min-width:620px) and (max-width:999px){ .range>:last-child{grid-column:span 2} }
 @media(min-width:1000px){ .range{grid-template-columns:repeat(5,minmax(0,1fr))} }
 .rw{background:var(--crema); padding:1.1rem 1.05rem 1.2rem; display:flex; flex-direction:column; gap:.5rem}
 .chips{display:flex; gap:4px}
@@ -227,15 +228,19 @@ footer p{margin:0 0 .4rem; max-width:68ch}
 
 <div class="wrap">
 
-<header class="hero sheet">
-  <div class="frame">01 &mdash; 06</div>
+<div class="tope">
+  <b>Portfolio</b>
+  <span class="lbl">Sabrina Romero &middot; Rosario, Argentina</span>
+</div>
+
+<header class="hero">
   <div>
     <img class="destello" src="{{GFX:destello-rosa}}" alt="">
     <div class="byline">
       <img class="retrato" src="{{IMG:retrato}}" alt="Retrato de Sabrina Romero">
       <div class="eyebrow">
-        <span class="lbl">Sabrina Romero</span>
-        <span class="lbl">Rosario, Argentina</span>
+        <span class="lbl">Contenido &middot; Fotograf&iacute;a</span>
+        <span class="lbl">Direcci&oacute;n visual</span>
         <span class="lbl">Desde 2015</span>
       </div>
     </div>
@@ -252,8 +257,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </header>
 
-<section class="sheet">
-  <div class="frame">Rango</div>
+<section>
   <div>
     <span class="lbl">El argumento</span>
     <h2>Cambiar de idioma cinco veces por semana</h2>
@@ -294,8 +298,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </section>
 
-<section class="case sheet" style="--brand:#B8871F">
-  <div class="frame">Caso 01</div>
+<section class="case" style="--brand:#B8871F">
   <div>
     <div class="case-head">
       <span class="bar"></span>
@@ -338,8 +341,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </section>
 
-<section class="case sheet" style="--brand:#028593">
-  <div class="frame">Caso 02</div>
+<section class="case" style="--brand:#028593">
   <div>
     <div class="case-head">
       <span class="bar"></span>
@@ -381,8 +383,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </section>
 
-<section class="case sheet" style="--brand:#96110D">
-  <div class="frame">Caso 03</div>
+<section class="case" style="--brand:#96110D">
   <div>
     <div class="case-head">
       <span class="bar"></span>
@@ -424,8 +425,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </section>
 
-<section class="case sheet" style="--brand:#D9531A">
-  <div class="frame">Caso 04</div>
+<section class="case" style="--brand:#D9531A">
   <div>
     <div class="case-head">
       <span class="bar"></span>
@@ -464,8 +464,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </section>
 
-<section class="case sheet" style="--brand:#4F7081">
-  <div class="frame">Caso 05</div>
+<section class="case" style="--brand:#4F7081">
   <div>
     <div class="case-head">
       <span class="bar"></span>
@@ -502,8 +501,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </section>
 
-<section class="case sheet" style="--brand:#2E45E0">
-  <div class="frame">Caso 06</div>
+<section class="case" style="--brand:#2E45E0">
   <div>
     <div class="case-head">
       <span class="bar"></span>
@@ -522,8 +520,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </section>
 
-<section class="sheet">
-  <div class="frame">Adem&aacute;s</div>
+<section>
   <div>
     <span class="lbl">Otros trabajos</span>
     <h2>No todo es una cuenta de Instagram</h2>
@@ -554,8 +551,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </section>
 
-<section class="sheet">
-  <div class="frame">Oficio</div>
+<section>
   <div>
     <span class="lbl">Qu&eacute; s&eacute; hacer</span>
     <h2>Resuelvo la cadena entera</h2>
@@ -596,8 +592,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </section>
 
-<section class="sheet">
-  <div class="frame">M&eacute;todo</div>
+<section>
   <div>
     <span class="lbl">C&oacute;mo trabajo</span>
     <h2>Ninguna cuenta se resuelve en el d&iacute;a</h2>
@@ -638,8 +633,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </section>
 
-<section class="sheet">
-  <div class="frame">Contacto</div>
+<section>
   <div>
     <div class="cta">
       <img class="destello-cta" src="{{GFX:destello-lila}}" alt="">
@@ -654,8 +648,7 @@ footer p{margin:0 0 .4rem; max-width:68ch}
   </div>
 </section>
 
-<footer class="sheet">
-  <div class="frame">Nota</div>
+<footer>
   <div>
     <p>M&eacute;tricas relevadas el 8 de septiembre de 2026 sobre las &uacute;ltimas 30 publicaciones de cada cuenta. Corresponden a datos p&uacute;blicos de Instagram.</p>
     <p>Todas las piezas mostradas son trabajos realizados para marcas que gestiono o gestion&eacute;. Sabrina Romero &mdash; Rosario, Argentina.</p>
