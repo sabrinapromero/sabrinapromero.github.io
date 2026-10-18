@@ -139,4 +139,4 @@ Estas son las publicaciones con mejor rendimiento de cada cuenta. Si el video or
 | Vincenzo | Campaña de temporada | 55 me gusta |
 | Cápsula | Reel de kit armado | 1.181 reproducciones |
 | Boschi | Ficha de bien en remate | — (pieza de diseño) |
-| Propia | Reel de foto | 4.735 reproducciones |
+| Propia | Reel de foto | 5.051 reproducciones |
